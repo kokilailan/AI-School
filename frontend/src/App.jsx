@@ -1,7 +1,8 @@
-import React from 'react'
-import { Routes, Route, Navigate } from 'react-router-dom'
+import React, { useEffect } from 'react'
+import { Routes, Route, Navigate, useLocation } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import ErrorBoundary from './components/ErrorBoundary'
+import Analytics from './components/Analytics'
 import Home from './pages/Home'
 import Signup from './pages/Signup'
 import Dashboard from './pages/Dashboard'
@@ -9,8 +10,21 @@ import Subject from './pages/Subject'
 import Lesson from './pages/Lesson'
 
 function App() {
+  const location = useLocation()
+  const trackingId = import.meta.env.VITE_GA_TRACKING_ID
+
+  // Track page views
+  useEffect(() => {
+    if (window.gtag && trackingId) {
+      window.gtag('config', trackingId, {
+        page_path: location.pathname,
+      })
+    }
+  }, [location, trackingId])
+
   return (
     <div className="App">
+      <Analytics trackingId={trackingId} />
       <ErrorBoundary>
         <Navbar />
         <div className="container">
