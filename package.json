@@ -1,0 +1,16 @@
+{
+  "name": "ai-school-platform",
+  "version": "1.0.0",
+  "description": "AI School Platform - Full Stack Application",
+  "scripts": {
+    "install:all": "npm install && cd frontend && npm install && cd ../backend && npm install",
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev:backend": "cd backend && npm run dev",
+    "build": "cd frontend && npm run build",
+    "start": "cd backend && npm start",
+    "deploy": "npm run build && npm start"
+  },
+  "keywords": ["education", "ai", "learning", "school"],
+  "author": "AI School Platform",
+  "license": "MIT"
+}
