@@ -5,6 +5,12 @@ node_modules/
 # Production builds
 /frontend/dist/
 /backend/dist/
+dist/
+build/
+*/dist/
+*/build/
+client/dist/
+client/.vite/
 
 # Environment variables
 .env
@@ -18,6 +24,7 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 lerna-debug.log*
+server.js.log
 
 # Runtime data
 pids
@@ -69,6 +76,8 @@ jspm_packages/
 # Nuxt.js build / generate output
 .nuxt
 dist
+dist-ssr
+*.local
 
 # Gatsby files
 .cache/
@@ -88,6 +97,14 @@ temp/
 *.swp
 *.swo
 *~
+.vscode/*
+!.vscode/extensions.json
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
 
 # OS generated files
 .DS_Store

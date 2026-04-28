@@ -1,4 +1,4 @@
-# AI School Platform
+# Genius Spark AI School Tutor
 
 A comprehensive AI-powered educational platform providing personalized learning experiences for students in grades 1-8.
 
