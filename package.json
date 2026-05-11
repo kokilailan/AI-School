@@ -2,6 +2,7 @@
   "name": "genius-spark-ai-school-tutor",
   "version": "1.0.0",
   "description": "Genius Spark AI School Tutor - Comprehensive Educational Platform",
+  "type": "module",
   "scripts": {
     "build": "vite build",
     "start": "node server.js",
@@ -11,13 +12,15 @@
   "author": "Genius Spark AI School",
   "license": "MIT",
   "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
     "express": "^5.2.1",
     "react": "^19.2.5",
     "react-dom": "^19.2.5"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
-    "@tailwindcss/postcss": "^4.2.4",
+    "tailwindcss": "^3.4.0",
     "@types/node": "^24.12.2",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
@@ -29,7 +32,6 @@
     "globals": "^17.5.0",
     "lucide-react": "^1.11.0",
     "postcss": "^8.5.12",
-    "tailwindcss": "^4.2.4",
     "typescript": "~6.0.2",
     "typescript-eslint": "^8.58.2",
     "vite": "^8.0.10"
